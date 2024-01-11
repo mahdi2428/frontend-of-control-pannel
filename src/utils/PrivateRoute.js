@@ -1,11 +1,11 @@
-import { Navigate } from "react-router-dom";
+// import { Navigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-
-export const ProtectedRoute = ({ children }) => {
+import { Outlet, Navigate } from 'react-router-dom'
+export const ProtectedRoute = () => {
   const {user}  = useAuth();
   // console.log(user.username)
-  if (user === null) {
-    return <Navigate to="/login" />;
-  }
-  return children;
+  return (
+    user ? <Outlet/> : <Navigate to={'/nopermission'} />
+  )
+  
 };

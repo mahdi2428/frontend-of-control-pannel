@@ -1,0 +1,22 @@
+.back-img{
+    background-image: url('../static/images/1.jpg');
+    background-repeat: no-repeat;
+    border-radius: 10%;
+    width: 500px;
+    height: 400px;
+    
+}
+
+.back-image-rotate{
+    width: 500px;
+    height: 400px;
+    border-radius: 10%;
+    transform: rotate(6deg);
+    border: 0.5px solid rgb(186, 170, 170);
+}
+.shadow-img{
+    width: 400px;
+    height: 400px;
+    border-radius: 10%;
+    border: 1px solid #00000060;
+}

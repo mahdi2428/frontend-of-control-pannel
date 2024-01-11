@@ -1,0 +1,127 @@
+.item {
+  width: 300px;
+  height: 400px;
+  background-position: 50% 50%;
+  display: inline-block;
+  transition: 0.8s;
+  background-size: cover;
+  position: absolute;
+  z-index: 1;
+  top: 35%;
+  transform: translate(27%, -50%);
+  border-radius: 20px;
+  box-shadow: 0 30px 50px #505050;
+}
+@media (max-width:1100px) {
+  .item{
+    width: 200px;
+    height: 400px;
+  }
+}
+@media (max-width:426px) {
+  .item{
+    width: 100px;
+    height: 100px;
+    top: 60%;
+  }
+  .item:nth-child(3) {
+    left: 10%!important;
+  }
+  .item:nth-child(4) {
+    left: calc(10% + 20%)!important;
+  }
+  .item:nth-child(5) {
+    left: calc(10% + 40%)!important;
+  }
+  .item .content {
+    left: 20px!important;
+  }
+}
+.item:nth-child(1),
+.item:nth-child(2) {
+  left: 0;
+  top: 0;
+  transform: translate(0, 0);
+  border-radius: 0;
+  width: 100%;
+  height: 80vh;
+  box-shadow: none;
+}
+.item:nth-child(3) {
+  left: 50%;
+}
+.item:nth-child(4) {
+  left: calc(50% + 10%);
+}
+.item:nth-child(5) {
+  left: calc(50% + 20%);
+}
+.item:nth-child(n + 6) {
+  /* left: calc(50% + 660px); */
+  /* opacity: 0; */
+}
+.item .content {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  width: 300px;
+  text-align: left;
+  padding: 0;
+  color: #fff;
+  transform: translate(0, -50%);
+  display: none;
+}
+.item:nth-child(2) .content {
+  display: block;
+  z-index: 11111;
+}
+.item .name {
+  font-size: 50px;
+  font-weight: bold;
+  opacity: 0;
+  animation: showcontent 1s ease-in-out 1 forwards;
+}
+.item .des {
+  font-size: 13px;
+  margin: 20px 0;
+  opacity: 0;
+  animation: showcontent 1s ease-in-out 0.3s 1 forwards;
+}
+.item button {
+  padding: 10px 20px;
+  border: none;
+  opacity: 0;
+  animation: showcontent 1s ease-in-out 0.6s 1 forwards;
+}
+@keyframes showcontent {
+  from {
+    opacity: 0;
+    transform: translate(0, 100px);
+    filter: blur(33px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+    filter: blur(0);
+  }
+}
+.buttons {
+  position: absolute;
+  bottom: 200px;
+  z-index: 222222;
+  text-align: center;
+  width: 100%;
+}
+.buttons button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #555;
+  transition: 0.5s;
+}
+.buttons button:hover {
+  background-color: #3ab0b6;
+  color: #eee;
+  
+}
+
